@@ -84,6 +84,8 @@ if (isNaN(km) == true || isNaN(etaUtente) == true) {
 }
 
 function myFunction() {
+  // document.querySelector("generazioneBiglietto-container").style
+
   var nome = document.getElementById("nomeCompleto").value;
   document.getElementById("nomePasseggero").innerHTML = nome;
 
@@ -107,16 +109,23 @@ function myFunction() {
   var dist = document.getElementById("km").value;
   if (ageField.value == "minorenne") {
     document.getElementById("costo").innerHTML =
-      dist * 0.21 - (dist * 0.21 * 20) / 100 + " Euro";
+      (dist * 0.21 - (dist * 0.21 * 20) / 100).toFixed(2) + " Euro";
   } else if (ageField.value == "maggiorenne") {
-    document.getElementById("costo").innerHTML = dist * 0.21 + " Euro";
+    document.getElementById("costo").innerHTML =
+      (dist * 0.21).toFixed(2) + " Euro";
   } else if (ageField.value == "overSessantacinque") {
     document.getElementById("costo").innerHTML =
-      dist * 0.21 - (dist * 0.21 * 40) / 100 + " Euro";
+      (dist * 0.21 - (dist * 0.21 * 40) / 100).toFixed(2) + " Euro";
   }
+
+  var remove = document.getElementById("deleteOnclick");
+  remove.style.display = "block";
 }
 
 function myFunctionAnnulla() {
   var element = document.getElementById("form_id");
   element.reset();
+
+  var remove = document.getElementById("deleteOnclick");
+  remove.style.display = "none";
 }

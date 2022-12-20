@@ -19,7 +19,7 @@ h3 {
 }
 
 .container {
-  max-width: 1323px;
+  max-width: 1376px;
   margin: 0 auto;
 }
 
@@ -29,6 +29,9 @@ h3 {
 
 form {
   padding: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 label {
@@ -99,4 +102,31 @@ label {
 
 .box {
   height: 100px;
+}
+
+input,
+select {
+  padding: 8px 10px;
+  margin: 8px 0px 8px 5px;
+  display: inline-block;
+  border: 1px solid #b91450;
+  border-radius: 4px;
+  box-sizing: border-box;
+  outline-width: 0;
+}
+
+input:focus,
+select:focus {
+  background-color: #b91450;
+  color: white;
+  outline-width: 0;
+}
+
+input:focus::placeholder,
+select:focus::placeholder {
+  color: white;
+}
+
+#deleteOnclick {
+  display: none;
 }
