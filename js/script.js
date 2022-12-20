@@ -103,4 +103,15 @@ function myFunction() {
   var numCodice = (document.getElementById("codice").innerHTML = Math.floor(
     Math.random() * 100000
   ));
+
+  var dist = document.getElementById("km").value;
+  if (ageField.value == "minorenne") {
+    document.getElementById("costo").innerHTML =
+      dist * 0.21 - (dist * 0.21 * 20) / 100 + " Euro";
+  } else if (ageField.value == "maggiorenne") {
+    document.getElementById("costo").innerHTML = dist * 0.21 + " Euro";
+  } else if (ageField.value == "overSessantacinque") {
+    document.getElementById("costo").innerHTML =
+      dist * 0.21 - (dist * 0.21 * 40) / 100 + " Euro";
+  }
 }
