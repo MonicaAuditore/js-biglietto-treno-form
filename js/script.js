@@ -47,6 +47,8 @@ if (isNaN(km) == true || isNaN(etaUtente) == true) {
 } else {
   costoBiglietto = 0.21 * km;
   console.log("costo base", typeof costoBiglietto, isNaN(costoBiglietto));
+  let finalPrice;
+  let discount;
 
   if (etaUtente < 18) {
     const discount = (costoBiglietto / 100) * 20;
