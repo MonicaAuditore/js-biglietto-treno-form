@@ -3,34 +3,3 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-.wrapper {
-  width: 400px;
-  max-width: 90%;
-  margin: 0 auto;
-}
-
-.wrapper label {
-  display: block;
-  margin: 0.5em 0;
-}
-
-.wrapper label input {
-  font-size: 18px;
-  padding: 0.5em;
-}
-
-.wrapper input[type="submit"] {
-  font-size: 25px;
-  color: blue;
-}
-
-.dati {
-  display: flex;
-  gap: 10px;
-}
-
-.box {
-  background-color: aquamarine;
-  height: 200px;
-}
