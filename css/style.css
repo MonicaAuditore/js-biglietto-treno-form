@@ -3,3 +3,49 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: pink;
+}
+
+.container {
+  max-width: 1323px;
+  margin: 0 auto;
+}
+
+.raccoltaDati {
+  margin-top: 55px;
+}
+
+.raccoltaDati-title,
+.generazioneBigliettoTitle {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.raccoltaDati-container,
+.generazioneBiglietto-container {
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.generazioneBiglietto {
+  margin-top: 100px;
+}
+
+.containerDettagli {
+  padding: 20px;
+}
+
+.innerContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.box {
+  height: 100px;
+  background-color: blueviolet;
+}

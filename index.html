@@ -8,56 +8,61 @@
     <title>calcolo del prezzo del biglietto del treno</title>
   </head>
   <body>
-    <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-    <div class="wrapper">
-      <form class="form">
-        <label for="nameField"
-          >Inserisci nome e cognome
-          <input
-            type="text"
-            name="nameField"
-            id="nameField"
-            placeholder="name"
-            required
-          />
-        </label>
+    <div class="container">
+      <!-- Raccolta dati -->
+      <div class="raccoltaDati">
+        <div class="raccoltaDati-title">
+          <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        </div>
+        <div class="raccoltaDati-container">
+          <form class="form">
+            <label for="nomeCompleto"
+              >Nome e Cognome
+              <input type="text" id="nomeCompleto" />
+            </label>
+            <label for="Km"
+              >Km da percorrere <input type="number" id="km"
+            /></label>
 
-        <label for="kmField"
-          >Inserisci quanti km devi percorrere
-          <input
-            type="number"
-            name="kmField"
-            id="kmField"
-            placeholder="km..."
-            required
-          />
-        </label>
+            <label for="ageField"
+              >Inserisci la tua età
 
-        <label for="ageField"
-          >Inserisci la tua età
-
-          <select name="ageField" id="ageField">
-            <option value="seleziona" selected disabled>Seleziona...</option>
-            <option value="minorenne">Minorenne</option>
-            <option value="maggiorenne">Maggiorenne</option>
-            <option value="overSessantacinque">Over 65</option>
-          </select>
-        </label>
-        <input type="submit" value="submit" name="submit" />
-      </form>
-    </div>
-
-    <div class="biglietto">
-      <h1>IL TUO BIGLIETTO</h1>
-      <div class="dati">
-        <div class="box nome">nome</div>
-        <div class="box offerta">offerta</div>
-        <div class="box carrozza">carrozza</div>
-        <div class="box codice">codice</div>
-        <div class="box costoBiglietto">costoBiglietto</div>
+              <select name="ageField" id="ageField">
+                <option value="seleziona" selected disabled>
+                  Seleziona...
+                </option>
+                <option value="minorenne">Minorenne</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="overSessantacinque">Over 65</option>
+              </select>
+            </label>
+            <input type="button" value="Genera" />
+            <input type="button" value="Annulla" />
+          </form>
+        </div>
       </div>
-    </div>
+      <!-- Fine raccolta dati -->
 
+      <!-- Generazione biglietto -->
+      <div class="generazioneBiglietto">
+        <div class="generazioneBigliettoTitle">
+          <h1>IL TUO BIGLIETTO</h1>
+        </div>
+        <div class="generazioneBiglietto-container">
+          <div class="containerDettagli">
+            <div class="titolo"><h2>DETTAGLIO PASSEGGERI</h2></div>
+            <div class="innerContainer">
+              <div class="box nomePasseggero">1</div>
+              <div class="box Offerta">2</div>
+              <div class="box Carrozza">3</div>
+              <div class="box Codice CP">4</div>
+              <div class="box Costo biglietto">5</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fine generazione biglietto -->
+    </div>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
