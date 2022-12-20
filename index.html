@@ -23,7 +23,7 @@
           <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
         </div>
         <div class="raccoltaDati-container">
-          <form class="form">
+          <form id="form_id" class="form">
             <label for="nomeCompleto"
               >Nome e Cognome
               <input
@@ -59,7 +59,12 @@
               onclick="myFunction()"
               value="Genera"
             />
-            <input class="buttoAnnulla" type="button" value="Annulla" />
+            <input
+              class="buttoAnnulla"
+              type="button"
+              value="Reset"
+              onclick="myFunctionAnnulla()"
+            />
           </form>
         </div>
       </div>

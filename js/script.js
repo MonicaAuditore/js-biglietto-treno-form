@@ -115,3 +115,8 @@ function myFunction() {
       dist * 0.21 - (dist * 0.21 * 40) / 100 + " Euro";
   }
 }
+
+function myFunctionAnnulla() {
+  var element = document.getElementById("form_id");
+  element.reset();
+}
