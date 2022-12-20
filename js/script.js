@@ -47,13 +47,13 @@ if (isNaN(km) == true || isNaN(etaUtente) == true) {
 } else {
   costoBiglietto = 0.21 * km;
   console.log("costo base", typeof costoBiglietto, isNaN(costoBiglietto));
-  let finalPrice;
+  let finalPrice = costoBiglietto;
   let discount;
 
   if (etaUtente < 18) {
-    const discount = (costoBiglietto / 100) * 20;
+    discount = (costoBiglietto / 100) * 20;
     console.log("sconto bambini", discount, typeof discount, isNaN(discount));
-    const finalPrice = costoBiglietto - discount;
+    finalPrice = costoBiglietto - discount;
     console.log(
       "Tot bambini",
       finalPrice,
@@ -61,17 +61,21 @@ if (isNaN(km) == true || isNaN(etaUtente) == true) {
       isNaN(finalPrice)
     );
   } else if (etaUtente > 65) {
-    const discount = (costoBiglietto / 100) * 40;
+    discount = (costoBiglietto / 100) * 40;
     console.log("sconto anziani", discount, typeof discount, isNaN(discount));
-    const finalPrice = costoBiglietto - discount;
+    finalPrice = costoBiglietto - discount;
     console.log(
       "Tot anziani",
       finalPrice,
       typeof finalPrice,
       isNaN(finalPrice)
     );
-  } else {
-    finalPrice = costoBiglietto;
   }
-  alert("Prezzo finale: Euro " + finalPrice);
+  alert("Prezzo finale: Euro " + finalPrice.toFixed(2));
+  console.log(
+    "Prezzo finale",
+    finalPrice,
+    typeof finalPrice,
+    isNaN(finalPrice)
+  );
 }
