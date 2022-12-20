@@ -95,4 +95,12 @@ function myFunction() {
   } else if (ageField.value == "overSessantacinque") {
     document.getElementById("offerta").innerHTML = "Biglietto sconto 40%";
   }
+
+  var numCarrozza = (document.getElementById("carrozza").innerHTML = Math.floor(
+    Math.random() * 10
+  ));
+
+  var numCodice = (document.getElementById("codice").innerHTML = Math.floor(
+    Math.random() * 100000
+  ));
 }
