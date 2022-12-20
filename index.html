@@ -26,10 +26,15 @@
           <form class="form">
             <label for="nomeCompleto"
               >Nome e Cognome
-              <input type="text" id="nomeCompleto" />
+              <input
+                type="text"
+                id="nomeCompleto"
+                placeholder="Inserisci il tuo nome"
+              />
             </label>
             <label for="Km"
-              >Km da percorrere <input type="number" id="km"
+              >Km da percorrere
+              <input type="number" id="km" placeholder="Inserisci i km"
             /></label>
 
             <label for="ageField"
@@ -44,8 +49,13 @@
                 <option value="overSessantacinque">Over 65</option>
               </select>
             </label>
-            <input class="button" type="button" value="Genera" />
-            <input class="button" type="button" value="Annulla" />
+            <input
+              class="buttonGenera"
+              type="button"
+              onclick="myFunction()"
+              value="Genera"
+            />
+            <input class="buttoAnnulla" type="button" value="Annulla" />
           </form>
         </div>
       </div>
@@ -58,11 +68,13 @@
         </div>
         <div class="generazioneBiglietto-container">
           <div class="containerDettagli">
-            <div class="titolo"><h2>DETTAGLIO PASSEGGERI</h2></div>
+            <div class="titolo">
+              <h2>DETTAGLIO PASSEGGERI</h2>
+            </div>
             <div class="innerContainer">
               <div class="box">
-                <h2>Nome passeggero</h2>
-                <div class="nomePasseggero"></div>
+                <h2 class="passeggeroName">Nome passeggero</h2>
+                <div id="nomePasseggero"></div>
               </div>
               <div class="box">
                 <h3>Offerta</h3>
@@ -78,7 +90,7 @@
               </div>
               <div class="box">
                 <h3>Costo biglietto</h3>
-                <div class="costo"></div>
+                <div id="costo"></div>
               </div>
             </div>
           </div>

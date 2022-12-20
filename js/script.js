@@ -83,27 +83,7 @@ if (isNaN(km) == true || isNaN(etaUtente) == true) {
   );
 }
 
-// const wrapper = document.querySelector(".wrapper"),
-//   form = wrapper.querySelectorAll(".form"),
-//   submitInput = form[0].querySelector('input[type="submit"]');
-
-// function getDataForm(e) {
-//   e.preventDefault();
-//   var formData = new FormData(form[0]);
-
-//   alert(
-//     formData.get("nameField") +
-//       " - " +
-//       formData.get("kmField") +
-//       " - " +
-//       formData.get("ageField")
-//   );
-// }
-
-// document.addEventListener(
-//   "DOMContentLoaded",
-//   function () {
-//     submitInput.addEventListener("click", getDataForm, false);
-//   },
-//   false
-// );
+function myFunction() {
+  var nome = document.getElementById("nomeCompleto").value;
+  document.getElementById("nomePasseggero").innerHTML = nome;
+}

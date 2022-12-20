@@ -63,6 +63,10 @@ label {
   width: 100%;
 }
 
+.passeggeroName {
+  padding-bottom: 10px;
+}
+
 .generazioneBiglietto-container {
   height: 242px;
   background-color: white;
