@@ -34,6 +34,9 @@ MILESTONE 2
 let km;
 let etaUtente;
 let costoBiglietto;
+let nomeCompleto;
+
+nomeCompleto = prompt("Inserisci il tuo nome e cognome");
 
 km = prompt("Inserisci i Km che devi percorrere");
 km = parseInt(km);
