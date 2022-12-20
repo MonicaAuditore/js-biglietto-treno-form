@@ -86,4 +86,13 @@ if (isNaN(km) == true || isNaN(etaUtente) == true) {
 function myFunction() {
   var nome = document.getElementById("nomeCompleto").value;
   document.getElementById("nomePasseggero").innerHTML = nome;
+
+  document.getElementById("ageField").value;
+  if (ageField.value == "minorenne") {
+    document.getElementById("offerta").innerHTML = "Biglietto sconto 20%";
+  } else if (ageField.value == "maggiorenne") {
+    document.getElementById("offerta").innerHTML = "Biglietto standard";
+  } else if (ageField.value == "overSessantacinque") {
+    document.getElementById("offerta").innerHTML = "Biglietto sconto 40%";
+  }
 }
