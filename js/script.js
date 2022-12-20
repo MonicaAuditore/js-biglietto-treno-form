@@ -36,17 +36,17 @@ let etaUtente;
 let costoBiglietto;
 let nomeCompleto;
 
-nomeCompleto = prompt("Inserisci il tuo nome e cognome");
+// nomeCompleto = prompt("Inserisci il tuo nome e cognome");
 
-km = prompt("Inserisci i Km che devi percorrere");
-km = parseInt(km);
-etaUtente = prompt("Inserisci la tua età");
+// km = prompt("Inserisci i Km che devi percorrere");
+// km = parseInt(km);
+// etaUtente = prompt("Inserisci la tua età");
 
 console.log("km", km, typeof km, isNaN(km));
 console.log("età", etaUtente, typeof etaUtente, isNaN(etaUtente));
 
 if (isNaN(km) == true || isNaN(etaUtente) == true) {
-  alert("I valori inseriti non sono validi! Aggiorna la pagina e riprova.");
+  // alert("I valori inseriti non sono validi! Aggiorna la pagina e riprova.");
 } else {
   costoBiglietto = 0.21 * km;
   console.log("costo base", typeof costoBiglietto, isNaN(costoBiglietto));
@@ -74,7 +74,7 @@ if (isNaN(km) == true || isNaN(etaUtente) == true) {
       isNaN(finalPrice)
     );
   }
-  alert("Prezzo finale: Euro " + finalPrice.toFixed(2));
+  // alert("Prezzo finale: Euro " + finalPrice.toFixed(2));
   console.log(
     "Prezzo finale",
     finalPrice,
@@ -82,3 +82,28 @@ if (isNaN(km) == true || isNaN(etaUtente) == true) {
     isNaN(finalPrice)
   );
 }
+
+const wrapper = document.querySelector(".wrapper"),
+  form = wrapper.querySelectorAll(".form"),
+  submitInput = form[0].querySelector('input[type="submit"]');
+
+function getDataForm(e) {
+  e.preventDefault();
+  var formData = new FormData(form[0]);
+
+  alert(
+    formData.get("nameField") +
+      " - " +
+      formData.get("kmField") +
+      " - " +
+      formData.get("ageField")
+  );
+}
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    submitInput.addEventListener("click", getDataForm, false);
+  },
+  false
+);

@@ -24,3 +24,13 @@
   font-size: 25px;
   color: blue;
 }
+
+.dati {
+  display: flex;
+  gap: 10px;
+}
+
+.box {
+  background-color: aquamarine;
+  height: 200px;
+}
