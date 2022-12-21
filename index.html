@@ -30,6 +30,7 @@
                 type="text"
                 id="nomeCompleto"
                 placeholder="Inserisci il tuo nome"
+                required="required"
               />
             </label>
             <label for="Km"
@@ -39,13 +40,14 @@
                 id="km"
                 placeholder="Inserisci i km"
                 value="distanza"
+                required="required"
             /></label>
 
             <label for="ageField"
               >Fascia d'età
 
               <select name="ageField" id="ageField">
-                <option value="seleziona" selected disabled>
+                <option value="seleziona" selected disabled required="required">
                   Seleziona...
                 </option>
                 <option value="minorenne">Minorenne</option>
@@ -53,12 +55,20 @@
                 <option value="overSessantacinque">Over 65</option>
               </select>
             </label>
-            <input
+            <!-- <input
               class="buttonGenera"
               type="button"
               onclick="myFunction()"
               value="Genera"
-            />
+            /> -->
+            <button
+              class="buttonGenera"
+              type="submit"
+              onclick="myFunction()"
+              value="Genera"
+            >
+              Genera
+            </button>
             <input
               class="buttoAnnulla"
               type="button"
